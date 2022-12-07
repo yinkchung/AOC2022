@@ -1,0 +1,10 @@
+=IF($B1="X",1,IF($B1="Y",2,IF($B1="Z",3,"")))
+
+=IF(OR(AND($A1="A",$B1="X"),AND($A1="B",$B1="Y"),AND($A1="C",$B1="Z")),3
+,IF(OR(AND($A1="A",$B1="Y"),AND($A1="B",$B1="Z"),AND($A1="C",$B1="X")),6,0))
+
+=IF($B1="X",0,IF($B1="Y",3,IF($B1="Z",6,"")))
+
+=IF(AND($B1="Z",$A1="A"),2,IF(AND($B1="Z",$A1="B"),3,IF(AND($B1="Z",$A1="C"),1
+,IF(AND($B1="Y",$A1="A"),1,IF(AND($B1="Y",$A1="B"),2,IF(AND($B1="Y",$A1="C"),3
+,IF(AND($B1="X",$A1="A"),3,IF(AND($B1="X",$A1="B"),1,IF(AND($B1="X",$A1="C"),2,"")))))))))
